@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Welcome</title>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="port.css?v=1.0">
+
+</head>
+
+<body>
+    <div id="bioNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeLeftNav()">&times;</a>
+        <div class="overlay-content">
+            <p id="ss">Merhaba, ben Kadir Ercen. 16 Ekim 2000 doğumluyum.</p>
+            <p>İlkokulu Orhangazi/Bursa'da, liseyi Balıkesir Gönen Anadolu Lisesinde okudum.</p>
+            <p>Şu anda Sakarya Üniversitesi Bilgisayar Mühendisliği bölümünde son sınıf öğrencisiyim ve sadece bitirme ödevlerim ve zorunlu stajlar kaldı.</p>
+            <p>Bildiğim/Aşinalığım olan diller-alanlar: Python, C#, Java, Javascript, HTML/CSS, Makine Öğrenmesi, Yapay Zeka, Bilgisayar Görmesi, Büyük Veri, Derin Öğrenme</p>
+            <p>Öğrenmekte olduklarım: Node.js, React</p>
+        </div>
+    </div>
+
+    <div class="left-container">
+        <span style="cursor:pointer" onclick="openLeftNav()">
+            <img src="/docs/bio.png" alt="bio" width="50px">
+        </span>
+    </div>
+
+    <div class="container">
+        <div class="icon">
+            <img src="/docs/icon.png" alt="me" width="200px" height="200px">
+        </div>
+        <div class="intro">
+            <h1 class="intro">Kadir Ercen</h1>
+        </div>
+        <div class="social-container">
+            <ul class="social-icons">
+            <li id="github"><a href="https://github.com/kdrercn" target="_blank" rel="noreferrer"><i class="fa fa-github"></i></a></li>
+            <li id="linkedin"><a href="https://www.linkedin.com/in/kadir-ercen-2149921b7/" target="_blank" rel="noreferrer"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="right-container">
+        <span id="left" style="cursor:pointer" onclick="openRightNav()">
+            <img id="hobbies" src="/docs/hobbies.png" alt="hobbies" width="50px">
+        </span>    
+    </div>
+
+    
+  
+  
+</body>
+
+
+<script>
+    $(document).ready(function(){
+      $("span").click(function(){
+        $("p").fadeIn(2500);
+      });
+    });
+    function openLeftNav() {
+      document.getElementById("bioNav").style.width = "100%";
+    }
+    
+    function openRightNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+    
+    function closeLeftNav() {
+      document.getElementById("bioNav").style.width = "0%";
+    }
+    
+    function closeRightNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+    </script>
+</html>
+
+
+<!-- <li id="reddit"><a href="https://www.reddit.com/user/aedangherardo" target="_blank" rel="noreferrer"><i class="fa fa-reddit"></i></a></li>
+<li id="spotify"><a href="https://open.spotify.com/user/nigelwarburton?si=4caaf11d8f9444a2" target="_blank" rel="noreferrer"><i class="fa fa-spotify"></i></a></li>
+<li id="film"><a href="https://letterboxd.com/kdrercn/" target="_blank" rel="noreferrer"><i class="fa fa-film"></i></a></li>
+<li id="steam"><a href="https://steamcommunity.com/id/QuadriErjuan/" target="_blank" rel="noreferrer"><i class="fa fa-steam"></i></a></li>
+             -->
