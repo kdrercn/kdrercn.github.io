@@ -1,562 +1,652 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Welcome</title>
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Welcome</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-  <style>
-	body {
-		background-image: url("/docs/bg-img.jpg");
-		background-attachment: fixed;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
+    <style>
+      body {
+        background-image: url("/docs/bg-img.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
-	p, #email {
-		color: #a9a59e;
-		font-family: "Poppins";
-	}
-	form{
-	  color: #a9a59e;
-	  font-family: "Poppins";
-	}
+      p,
+      #email {
+        color: #ffffff;
+        font-family: "Poppins";
+      }
+      form {
+        color: #ffffff;
+        font-family: "Poppins";
+      }
 
-	#p1,#p2,#p3,#p4,#p5,#p6,#p7,#p8 {
-	  display: none; 
-	}
+      #p1,
+      #p2,
+      #p3,
+      #p4,
+      #p5,
+      #p6,
+      #p7,
+      #p8 {
+        display: none;
+      }
 
-	img{
-		border-radius: 100%;
-		display: block;
-		background: linear-gradient(45deg, #440202, #110101);
-		transition: all 265ms ease-out; 
-	}
+      img {
+        border-radius: 100%;
+        display: block;
+        background: linear-gradient(45deg, #110101, #110101);
+        transition: all 265ms ease-out;
+      }
 
-	#hobbies {
-		border-radius: 100%;
+      #hobbies {
+        border-radius: 100%;
 
-		display: block;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		transition: all 265ms ease-in; 
+        display: block;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 265ms ease-in;
 
-		background: linear-gradient(45deg, #7e0909, #110101) border-box;
-		border-radius: 50em;
-		border: 4px solid transparent;
-	}
+        background: linear-gradient(45deg, #110101, #120000) border-box;
+        border-radius: 50em;
+        border: 4px solid transparent;
+      }
 
-	#bio {
-		border-radius: 100%;
+      #bio {
+        border-radius: 100%;
 
-		display: block;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		transition: all 265ms ease-in; 
+        display: block;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 265ms ease-in;
 
-		background: linear-gradient(45deg, #7e0909, #110101) border-box;
-		border-radius: 50em;
-		border: 4px solid transparent;
-	}
+        background: linear-gradient(45deg, #110101, #110101) border-box;
+        border-radius: 50em;
+        border: 4px solid transparent;
+      }
 
-	img:hover{
-		color: #171515;
-		background: -webkit-linear-gradient(45deg, #171515, #171515);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		transition: all 265ms ease-in; 
-	}
+      img:hover {
+        color: #171515;
+        background: -webkit-linear-gradient(45deg, #171515, #171515);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 265ms ease-in;
+      }
 
-	.left-container {
-		position: absolute;
-		top: 50%;
-		-ms-transform: translateX(-0%) translateY(-50%);
-		-webkit-transform: translate(-0%,-50%);
-		transform: translate(-0%,-50%);
-	}
+      .left-container {
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateX(-0%) translateY(-50%);
+        -webkit-transform: translate(-0%, -50%);
+        transform: translate(-0%, -50%);
+      }
 
-	.right-container {
-		position: absolute;
-		top: 50%;
-		left: 99%;
-		-ms-transform: translateX(-100%) translateY(-50%);
-		-webkit-transform: translate(-100%,-50%);
-		transform: translate(-100%,-50%);
-	}
+      .right-container {
+        position: absolute;
+        top: 50%;
+        left: 99%;
+        -ms-transform: translateX(-100%) translateY(-50%);
+        -webkit-transform: translate(-100%, -50%);
+        transform: translate(-100%, -50%);
+      }
 
-	#left .tooltiptext {
-	  font-family: "Poppins";
+      #left .tooltiptext {
+        font-family: "Poppins";
 
-	  visibility: hidden;
-	  width: 120px;
-	  background-image: linear-gradient(45deg, #7e0909, #110101);
-	  color: #a9a59e;
-	  text-align: center;
-	  border-radius: 6px;
-	  padding: 5px 0;
-	  
-	  position: absolute;
-	  z-index: 1;
-	  top: -5px;
-	  left: 105%;
-	}
+        visibility: hidden;
+        width: 120px;
+        background-image: linear-gradient(45deg, #110101, #110101);
+        color: #a9a59e;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
 
-	#left:hover .tooltiptext {
-	  visibility: visible;
-	}
+        position: absolute;
+        z-index: 1;
+        top: -5px;
+        left: 105%;
+      }
 
-	#right .tooltiptext {
-	  font-family: "Poppins";
+      #left:hover .tooltiptext {
+        visibility: visible;
+      }
 
-	  visibility: hidden;
-	  width: 120px;
-	  background-image: linear-gradient(45deg, #7e0909, #110101);
-	  color: #a9a59e;
-	  text-align: center;
-	  border-radius: 6px;
-	  padding: 5px 0;
-	  
-	  position: absolute;
-	  z-index: 1;
-	  top: -5px;
-	  right: 105%;
-	}
+      #right .tooltiptext {
+        font-family: "Poppins";
 
-	#right:hover .tooltiptext {
-	  visibility: visible;
-	}
+        visibility: hidden;
+        width: 120px;
+        background-image: linear-gradient(45deg, #110101, #110101);
+        color: #a9a59e;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
 
-	.hoboverlay {
-	  height: 100%;
-	  width: 0;
-	  position: fixed;
-	  z-index: 1;
-	  top: 0;
-	  right: 0;
-	  background-color: rgb(0,0,0);
-	  background-color: rgba(0,0,0, 0.9);
-	  overflow-x: hidden;
-	  transition: 0.5s;
-	}
-	  
-	.hoboverlay-content {
-	  position: relative;
-	  top: 25%;
-	  width: 100%;
-	  text-align: center;
-	  margin-top: 30px;
-	}
+        position: absolute;
+        z-index: 1;
+        top: -5px;
+        right: 105%;
+      }
 
-	.hoboverlay a {
-	  padding: 8px;
-	  text-decoration: none;
-	  font-size: 36px;
-	  color: #818181;
-	  display: block;
-	  transition: 0.3s;
-	}
+      #right:hover .tooltiptext {
+        visibility: visible;
+      }
 
-	.hoboverlay a:hover, .hoboverlay a:focus {
-	  color: #f1f1f1;
-	}
+      .hoboverlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+      }
 
-	.hoboverlay .closebtn {
-	  position: absolute;
-	  top: 20px;
-	  right: 45px;
-	  font-size: 60px;
-	}
+      .hoboverlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
 
-	.overlay {
-		height: 100%;
-		width: 0;
-		position: fixed;
-		z-index: 1;
-		top: 0;
-		left: 0;
-		background-color: rgb(0,0,0);
-		background-color: rgba(0,0,0, 0.9);
-		overflow-x: hidden;
-		transition: 0.5s;
-	  }
-	  
-	  .overlay-content {
-		position: relative;
-		top: 25%;
-		width: 100%;
-		text-align: center;
-		margin-top: 30px;
-	  }
-	  
-	  .overlay a {
-		padding: 8px;
-		text-decoration: none;
-		font-size: 36px;
-		color: #818181;
-		display: block;
-		transition: 0.3s;
-	  }
-	  
-	  .overlay a:hover, .overlay a:focus {
-		color: #f1f1f1;
-	  }
-	  
-	  .overlay .closebtn {
-		position: absolute;
-		top: 20px;
-		right: 45px;
-		font-size: 60px;
-	  }
-	  
-	  @media screen and (max-height: 450px) {
-		.overlay a {font-size: 20px}
-		.overlay .closebtn {
-		font-size: 40px;
-		top: 15px;
-		right: 35px;
-		}
-	  }
-	  @media screen and (max-height: 450px) {
-		.hoboverlay a {font-size: 20px}
-		.hoboverlay .closebtn {
-		font-size: 40px;
-		top: 15px;
-		right: 35px;
-		}
-	  }
+      .hoboverlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
 
+      .hoboverlay a:hover,
+      .hoboverlay a:focus {
+        color: #f1f1f1;
+      }
 
-	/* center container */
-	.container {
-		color: #a9a59e;
-		padding: 15px;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		-ms-transform: translateX(-50%) translateY(-50%);
-		-webkit-transform: translate(-50%,-50%);
-		transform: translate(-50%,-50%);
-	}
+      .hoboverlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+      }
 
-	.icon {
-		height: auto;
-		max-width: 200px;
-		display: block;
-		margin-left: auto;
-		margin-right: auto; 
-		
-		background: linear-gradient(45deg, #7e0909, #110101) border-box;
-		border-radius: 50em;
-		border: 8px solid transparent;   
-	}
+      .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+      }
 
-	.icon:hover{
-		background: linear-gradient(45deg, #110101, #7e0909) border-box;
-		border-radius: 50em;
-		border: 8px solid transparent;   
-	}
+      .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
 
-	.intro {
-		height: auto;
-		max-width: 200px;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;  
-		font-family: "Poppins";
-		color: #a9a59e;
-		background: -webkit-linear-gradient(45deg, #440202, #110101);
-		-webkit-background-clip: text;
-		-webkit-text-stroke: 3px transparent;
-	  
-	}
-	.intro h1{
-		text-align: center;
-	}
+      .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
 
-	.social-container {
-		height: auto;
-		max-width: 200px;
-		display: block;
-		margin-left: 10%;
-	  }
-	  
-	  .social-icons {
-		padding: 0;
-		list-style: none;
-		margin: 1em;
-	  }
-	  .social-icons li {
-		display: inline-block;
-		margin: 0.15em;
-		position: relative;
-		font-size: 1.2em;
-	  }
-	  .social-icons i {
-		color: #fff;
-		position: absolute;
-		top: 21px;
-		left: 21px;
-		transition: all 265ms ease-out;
-	  }
-	  .social-icons a {
-		display: inline-block;
-	  }
-	  .social-icons a:before {
-		transform: scale(1);
-		-ms-transform: scale(1);
-		-webkit-transform: scale(1);
-		content: " ";
-		width: 60px;
-		height: 60px;
-		border-radius: 100%;
-		display: block;
-		background: linear-gradient(45deg, #440202, #110101);
-		transition: all 265ms ease-out;
-	  }
-	  .social-icons a:hover:before {
-		transform: scale(0);
-		transition: all 265ms ease-in;
-	  }
-	  .social-icons a:hover i {
-		transform: scale(2);
-		-ms-transform: scale(2);
-		-webkit-transform: scale(2);
-	  }
-	  
-	  .social-icons #github:hover i{
-		color: #171515;
-		background: -webkit-linear-gradient(45deg, #171515, #171515);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		transition: all 265ms ease-in;  
-	  }
-	  .social-icons #linkedin:hover i{
-		color: #0e76a8;
-		background: -webkit-linear-gradient(45deg, #0e76a8, #0e76a8);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		transition: all 265ms ease-in;  
-	  }
-	 
-	  .social-icons #goodreads:hover i{
-		color: #6C6461;
-		background: -webkit-linear-gradient(45deg, #6C6461, #6C6461); 
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		transition: all 265ms ease-in; 
-	  
-	  }
-	  
-	  .social-icons #spotify:hover i{
-		color: #1DB954;
-		background: -webkit-linear-gradient(45deg, #1DB954, #1DB954); 
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		transition: all 265ms ease-in; 
-	  
-	  }
-	  
-	  .social-icons #film:hover i{
-		color: #ff8000;
-		background: -webkit-linear-gradient(45deg, #ff8000, #00e054,#40bcf4);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		transition: all 265ms ease-in;  
-	  
-	  }
-	  
-	  .social-icons #steam:hover i{
-		color: #fff;
-		background: -webkit-linear-gradient(20deg, #0000, #00adee); 
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		transition: all 265ms ease-in; 
-	  }
-	  
-	 
-	  .bottom-container {
-		background-image: linear-gradient(20deg, #440202, #110101);
-		opacity: 0.5;
-		color: #a9a59e;
-		font-family: "Poppins";
-		padding: 15px;
-		position: absolute;
-		bottom: 0%;
-		left: 50%;
-		-ms-transform: translateX(-50%) translateY(-0%);
-		-webkit-transform: translate(-50%,-0%);
-		transform: translate(-50%,-0%);
-	}
-	#bottom .tooltiptext {
-	  font-family: "Poppins";
-	  font-size: small;
-	  visibility: hidden;
-	  width: 100%;
-	  background-image: linear-gradient(45deg, #7e0909, #110101);
-	  color: #a9a59e;
-	  text-align: center;
-	  border-radius: 6px;
-	  padding: 5px 0;
-	  
-	  position: absolute;
-	  z-index: 1;
-	  top: -50%;
-	  left: 0;
-	}
+      .overlay a:hover,
+      .overlay a:focus {
+        color: #f1f1f1;
+      }
 
-	#bottom:hover .tooltiptext {
-	  visibility: visible;
-	}
+      .overlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+      }
 
-	.copyoverlay {
-	  height: 0%;
-	  width: 100%;
-	  position: fixed;
-	  z-index: 1;
-	  bottom: 0;
-	  right: 0;
-	  background-color: rgb(0,0,0);
-	  background-color: rgba(0,0,0, 0.9);
-	  overflow-x: hidden;
-	  transition: 0.5s;
-	}
-	  
-	.copyoverlay-content {
-	  position: relative;
-	  top: 25%;
-	  width: 100%;
-	  text-align: center;
-	  margin-top: 30px;
-	}
+      @media screen and (max-height: 450px) {
+        .overlay a {
+          font-size: 20px;
+        }
+        .overlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+        }
+      }
+      @media screen and (max-height: 450px) {
+        .hoboverlay a {
+          font-size: 20px;
+        }
+        .hoboverlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+        }
+      }
 
-	.copyoverlay a {
-	  padding: 8px;
-	  text-decoration: none;
-	  font-size: 36px;
-	  color: #818181;
-	  display: block;
-	  transition: 0.3s;
-	}
+      /* center container */
+      .container {
+        color: #a9a59e;
+        padding: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
 
-	.copyoverlay a:hover, .copyoverlay a:focus {
-	  color: #f1f1f1;
-	}
+      .icon {
+        height: auto;
+        max-width: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
 
-	.copyoverlay .closebtn {
-	  position: absolute;
-	  top: 20px;
-	  right: 45px;
-	  font-size: 60px;
-	}
+        background: linear-gradient(45deg, #110101, #110101) border-box;
+        border-radius: 50em;
+        border: 8px solid transparent;
+      }
 
+      .icon:hover {
+        background: linear-gradient(45deg, #110101, #110101) border-box;
+        border-radius: 50em;
+        border: 8px solid transparent;
+      }
 
-  </style>
+      .intro {
+        height: auto;
+        max-width: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: "Poppins";
+        color: #a9a59e;
+        background: -webkit-linear-gradient(45deg, #110101, #110101);
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 3px transparent;
+      }
+      .intro h1 {
+        text-align: center;
+      }
 
-</head>
+      .social-container {
+        height: auto;
+        max-width: 200px;
+        display: block;
+        margin-left: 10%;
+      }
 
-<body>
+      .social-icons {
+        padding: 0;
+        list-style: none;
+        margin: 1em;
+      }
+      .social-icons li {
+        display: inline-block;
+        margin: 0.15em;
+        position: relative;
+        font-size: 1.2em;
+      }
+      .social-icons i {
+        color: #fff;
+        position: absolute;
+        top: 21px;
+        left: 21px;
+        transition: all 265ms ease-out;
+      }
+      .social-icons a {
+        display: inline-block;
+      }
+      .social-icons a:before {
+        transform: scale(1);
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        content: " ";
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        display: block;
+        background: linear-gradient(45deg, #110101, #110101);
+        transition: all 265ms ease-out;
+      }
+      .social-icons a:hover:before {
+        transform: scale(0);
+        transition: all 265ms ease-in;
+      }
+      .social-icons a:hover i {
+        transform: scale(2);
+        -ms-transform: scale(2);
+        -webkit-transform: scale(2);
+      }
+
+      .social-icons #github:hover i {
+        color: #ffffff;
+        background: -webkit-linear-gradient(45deg, #ffffff, #ffffff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 265ms ease-in;
+      }
+      .social-icons #linkedin:hover i {
+        color: #0e76a8;
+        background: -webkit-linear-gradient(45deg, #0e76a8, #0e76a8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 265ms ease-in;
+      }
+
+      .social-icons #goodreads:hover i {
+        color: #6c6461;
+        background: -webkit-linear-gradient(45deg, #6c6461, #6c6461);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 265ms ease-in;
+      }
+
+      .social-icons #spotify:hover i {
+        color: #1db954;
+        background: -webkit-linear-gradient(45deg, #1db954, #1db954);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 265ms ease-in;
+      }
+
+      .social-icons #film:hover i {
+        color: #ff8000;
+        background: -webkit-linear-gradient(45deg, #ff8000, #00e054, #40bcf4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 265ms ease-in;
+      }
+
+      .social-icons #steam:hover i {
+        color: #fff;
+        background: -webkit-linear-gradient(20deg, #0000, #00adee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 265ms ease-in;
+      }
+
+      .bottom-container {
+        background-image: linear-gradient(20deg, #110101, #110101);
+        opacity: 0.5;
+        color: #a9a59e;
+        font-family: "Poppins";
+        padding: 15px;
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        -ms-transform: translateX(-50%) translateY(-0%);
+        -webkit-transform: translate(-50%, -0%);
+        transform: translate(-50%, -0%);
+      }
+      #bottom .tooltiptext {
+        font-family: "Poppins";
+        font-size: small;
+        visibility: hidden;
+        width: 100%;
+        background-image: linear-gradient(45deg, #110101, #110101);
+        color: #a9a59e;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+
+        position: absolute;
+        z-index: 1;
+        top: -50%;
+        left: 0;
+      }
+
+      #bottom:hover .tooltiptext {
+        visibility: visible;
+      }
+
+      .copyoverlay {
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        right: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+      }
+
+      .copyoverlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .copyoverlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .copyoverlay a:hover,
+      .copyoverlay a:focus {
+        color: #f1f1f1;
+      }
+
+      .copyoverlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+      }
+    </style>
+  </head>
+
+  <body>
     <div id="bioNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeLeftNav()">&times;</a>
-        <div class="overlay-content">
-            <p id="p1">Merhaba, ben Kadir Ercen. 16 Ekim 2000 doğumluyum.</p>
-            <p id="p2">İlkokulu Bursa Orhangazi Atatürk İlkokulunda, liseyi Balıkesir Gönen Anadolu Lisesinde okudum.</p>
-            <p id="p3">Şu anda Sakarya Üniversitesi Bilgisayar Mühendisliği bölümünde son sınıf öğrencisiyim ve sadece zorunlu stajlar kaldı.</p>
-            <p id="p4">GNO:2.7</p>
-            <p id="p5">2019 Bahar Döneminde İtalya Milano Üniversitesinde erasmus yaptım.</p>
-            <p id="p6">Yabancı diller: İngilizce: İleri seviye İtalyanca: Giriş</p>
-            <p id="p7">Bildiğim/Aşinalığım olan diller-alanlar: Python, C#, Java, Javascript, HTML/CSS, Makine Öğrenmesi, Yapay Zeka, Bilgisayar Görmesi, Büyük Veri, Derin Öğrenme</p>
-            <p id="p8">Öğrenmekte olduklarım: Node.js, React</p>
-        </div>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeLeftNav()"
+        >&times;</a
+      >
+      <div class="overlay-content">
+        <p id="p1">Merhaba, ben Kadir Ercen. 16 Ekim 2000 doğumluyum.</p>
+        <br />
+        <p id="p2">
+          İlkokulu Bursa Orhangazi Atatürk İlkokulunda, liseyi Balıkesir Gönen
+          Anadolu Lisesinde okudum.
+        </p>
+        <p id="p3">
+          Sakarya Üniversitesi Bilgisayar Mühendisliği bölümünden 9 Ocak 2024
+          tarihinde mezun oldum.
+        </p>
+        <p id="p4">
+          2019 Bahar Döneminde Erasmus Değişim Programı ile Milano
+          Üniversitesinde eğitim gördüm.
+        </p>
+        <br />
+        <p id="p5">
+          Şubat ayından itibaren Ziraat Bankasında Müfettiş Yardımcısı olarak
+          çalışıyorum.
+        </p>
+        <p id="p6">
+          Aynı zamanda Ankara Üniversitesi Siyasal Bilimler Enstitüsünde
+          Bankacılık Yüksek Lisansı yapıyorum.
+        </p>
+        <br />
+        <p id="p7">Yabancı diller: İngilizce: İleri seviye İtalyanca: Giriş</p>
+        <p id="p8">
+          Bildiğim/Aşinalığım olan diller-alanlar: Python, C#, Java, Javascript,
+          HTML/CSS, Makine Öğrenmesi, Yapay Zeka, Bilgisayar Görmesi, Büyük
+          Veri, Derin Öğrenme, Node.js, React.
+        </p>
+      </div>
     </div>
 
     <div class="left-container">
-        <span id="left" style="cursor:pointer" onclick="openLeftNav()">
-            <span class="tooltiptext">Özgeçmiş</span> 
-            <img id="bio" src="/docs/bio.png" alt="bio" width="50px">
-        </span>
+      <span id="left" style="cursor: pointer" onclick="openLeftNav()">
+        <span class="tooltiptext">Özgeçmiş</span>
+        <img id="bio" src="/docs/bio.png" alt="bio" width="50px" />
+      </span>
     </div>
 
     <div class="container">
-        <div class="icon">
-            <img src="/docs/icon.png" alt="me" width="200px" height="200px">
-        </div>
-        <div class="intro">
-            <h1 class="intro">Kadir Ercen</h1>
-        </div>
-        <div class="social-container">
-            <ul class="social-icons">
-            <li id="github"><a href="https://github.com/kdrercn" target="_blank" rel="noreferrer"><i class="fa fa-github"></i></a></li>
-            <li id="linkedin"><a href="https://www.linkedin.com/in/kadirercen/" target="_blank" rel="noreferrer"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-        </div>
+      <div class="icon">
+        <img src="/docs/icon.png" alt="me" width="200px" height="200px" />
+      </div>
+      <div class="intro">
+        <h1 class="intro">Kadir Ercen</h1>
+      </div>
+      <div class="social-container">
+        <ul class="social-icons">
+          <li id="github">
+            <a
+              href="https://github.com/kdrercn"
+              target="_blank"
+              rel="noreferrer"
+              ><i class="fa fa-github"></i
+            ></a>
+          </li>
+          <li id="linkedin">
+            <a
+              href="https://www.linkedin.com/in/kadirercen/"
+              target="_blank"
+              rel="noreferrer"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div class="right-container">
-        <span id="right" style="cursor:pointer" onclick="openRightNav()">
-            <span class="tooltiptext">Hobiler</span>          
-            <img id="hobbies" src="/docs/hobbies.png" alt="hobbies" width="50px">
-        </span>    
+      <span id="right" style="cursor: pointer" onclick="openRightNav()">
+        <span class="tooltiptext">Hobiler</span>
+        <img id="hobbies" src="/docs/hobbies.png" alt="hobbies" width="50px" />
+      </span>
     </div>
 
     <div id="hobbiesNav" class="hoboverlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeRightNav()">&times;</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeRightNav()"
+        >&times;</a
+      >
       <div class="overlay-content">
         <ul class="social-icons">
-          <li id="goodreads"><a href="https://www.goodreads.com/user/show/158321972-kadir" target="_blank" rel="noreferrer"><i class='fab fa-goodreads'></i></a></li>
-          <li id="spotify"><a href="https://open.spotify.com/user/nigelwarburton?si=4caaf11d8f9444a2" target="_blank" rel="noreferrer"><i class="fa fa-spotify"></i></a></li>
-          <li id="film"><a href="https://letterboxd.com/kdrercn/" target="_blank" rel="noreferrer"><i class="fa fa-film" aria-hidden="true"></i></a></li>
-          <li id="steam"><a href="https://steamcommunity.com/id/QuadriErjuan/" target="_blank" rel="noreferrer"><i class="fa fa-steam"></i></a></li></ul>
+          <li id="goodreads">
+            <a
+              href="https://www.goodreads.com/user/show/158321972-kadir"
+              target="_blank"
+              rel="noreferrer"
+              ><i class="fab fa-goodreads"></i
+            ></a>
+          </li>
+          <li id="spotify">
+            <a
+              href="https://open.spotify.com/user/nigelwarburton?si=4caaf11d8f9444a2"
+              target="_blank"
+              rel="noreferrer"
+              ><i class="fa fa-spotify"></i
+            ></a>
+          </li>
+          <li id="film">
+            <a
+              href="https://letterboxd.com/kdrercn/"
+              target="_blank"
+              rel="noreferrer"
+              ><i class="fa fa-film" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li id="steam">
+            <a
+              href="https://steamcommunity.com/id/QuadriErjuan/"
+              target="_blank"
+              rel="noreferrer"
+              ><i class="fa fa-steam"></i
+            ></a>
+          </li>
+        </ul>
       </div>
     </div>
 
     <div class="bottom-container">
-      <span id="bottom" style="cursor:pointer" onclick="openBottomNav()">
-        <span class="tooltiptext">Copyright & Contact</span>          
-          Kadir Ercen 2022 
+      <span id="bottom" style="cursor: pointer" onclick="openBottomNav()">
+        <span class="tooltiptext">Copyright & Contact</span>
+        Kadir Ercen 2024
       </span>
     </div>
-    
+
     <div id="copyrightsNav" class="copyoverlay">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeBottomNav()">&times;</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeBottomNav()"
+        >&times;</a
+      >
       <div class="overlay-content">
         <div class="form-container">
-          <h1 id="email">kadirercen@gmail.com</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <a href="https://www.flaticon.com/free-icons/hobby" title="hobby icons" style="font-size: 10px; font-family: 'Poppins';">Hobby icons created by GOWI - Flaticon</a>          
+          <h1 id="email">kadirercen@gmail.com</h1>
+          <br />
+
+          <h1 id="email">507 845 2719</h1>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <a
+            href="https://www.flaticon.com/free-icons/hobby"
+            title="hobby icons"
+            style="font-size: 10px; font-family: 'Poppins'"
+            >Hobby icons created by GOWI - Flaticon</a
+          >
         </div>
       </div>
     </div>
+  </body>
 
-    
-  
-  
-</body>
-
-
-<script>
-    $(document).ready(function(){
-      $("#left").click(function(){
+  <script>
+    $(document).ready(function () {
+      $("#left").click(function () {
         $("#p1").fadeIn(2500);
         $("#p2").fadeIn(2500);
         $("#p3").fadeIn(2500);
         $("#p4").fadeIn(2500);
-        $("#p5").fadeIn(2500);        
+        $("#p5").fadeIn(2500);
         $("#p6").fadeIn(2500);
         $("#p7").fadeIn(2500);
         $("#p8").fadeIn(2500);
       });
     });
-    
+
     function openLeftNav() {
       document.getElementById("bioNav").style.width = "100%";
     }
-    
+
     function openRightNav() {
       document.getElementById("hobbiesNav").style.width = "100%";
     }
@@ -564,11 +654,11 @@
     function openBottomNav() {
       document.getElementById("copyrightsNav").style.height = "100%";
     }
-    
+
     function closeLeftNav() {
       document.getElementById("bioNav").style.width = "0%";
     }
-    
+
     function closeRightNav() {
       document.getElementById("hobbiesNav").style.width = "0%";
     }
@@ -576,6 +666,5 @@
     function closeBottomNav() {
       document.getElementById("copyrightsNav").style.height = "0%";
     }
-    </script>
+  </script>
 </html>
-
